@@ -11,6 +11,7 @@ const Form = () => {
                 <div className="mt-3 grid grid-cols-12 items-center">
                     <label className="col-span-3" htmlFor="demo">Industry</label>
                     <Select
+                        variant="filled"
                         className="col-span-4"
                         labelId="demo"
                         id="demo"
@@ -24,6 +25,7 @@ const Form = () => {
                 <div className="mt-3 grid grid-cols-12 items-center">
                     <label className="col-span-3" htmlFor="demo">Main Group</label>
                     <Select
+                        variant="filled"
                         className="col-span-4"
                         labelId="demo"
                         id="demo"
@@ -35,6 +37,7 @@ const Form = () => {
                     </Select>
                     <label className="col-span-3 text-center">System Id</label>
                     <Select
+                        variant="filled"
                         className="col-span-2"
                         labelId="demo"
                         id="demo"
@@ -48,6 +51,7 @@ const Form = () => {
                 <div className="mt-3 grid grid-cols-12 items-center">
                     <label className="col-span-3" htmlFor="demo">Sub Group</label>
                     <Select
+                        variant="filled"
                         className="col-span-9"
                         labelId="demo"
                         id="demo"
@@ -61,6 +65,7 @@ const Form = () => {
                 <div className="mt-3 grid grid-cols-12 items-center">
                     <label className="col-span-3" htmlFor="demo">Category Type</label>
                     <Select
+                        variant="filled"
                         className="col-span-9"
                         labelId="demo"
                         id="demo"
@@ -74,6 +79,7 @@ const Form = () => {
                 <div className="mt-3 grid grid-cols-12 items-center">
                     <label className="col-span-3" htmlFor="demo">Process Type</label>
                     <Select
+                        variant="filled"
                         className="col-span-9"
                         labelId="demo"
                         id="demo"
@@ -87,6 +93,7 @@ const Form = () => {
                 <div className="mt-3 grid grid-cols-12 items-center">
                     <label className="col-span-3" htmlFor="demo">Ratio Type/Blend</label>
                     <Select
+                        variant="filled"
                         className="col-span-9"
                         labelId="demo"
                         id="demo"
@@ -100,6 +107,7 @@ const Form = () => {
                 <div className="my-10 grid grid-cols-12 items-center">
                     <label className="col-span-3" htmlFor="demo">Main Group</label>
                     <Select
+                        variant="filled"
                         className="col-span-4"
                         labelId="demo"
                         id="demo"
@@ -111,6 +119,7 @@ const Form = () => {
                     </Select>
                     <label className="col-span-3 text-center">System Id</label>
                     <Select
+                        variant="filled"
                         className="col-span-2"
                         labelId="demo"
                         id="demo"
@@ -125,21 +134,22 @@ const Form = () => {
             <div className="col-span-7 bg-gray-50 p-5 rounded-lg">
                 <div className="mt-3 grid grid-cols-12 items-center">
                     <label className="col-span-3" htmlFor="demo">Dia</label>
-                    <TextField size="small" className="col-span-1"/>
+                    <TextField variant='filled' size="small" className="col-span-1"/>
                     <label className="col-span-2 text-center" htmlFor="demo">Guage</label>
-                    <TextField size="small" className="col-span-1"/>
+                    <TextField variant='filled' size="small" className="col-span-1"/>
                     <label className="col-span-2 text-center" htmlFor="demo">GSM</label>
-                    <TextField size="small" className="col-span-1"/>
+                    <TextField variant='filled' size="small" className="col-span-1"/>
                     <label className="col-span-1 text-center" htmlFor="demo">Weight</label>
-                    <TextField size="small" className="col-span-1"/>
+                    <TextField variant='filled' size="small" className="col-span-1"/>
                 </div>
                 <div className="mt-3 grid grid-cols-12 items-center">
                     <label className="col-span-3" htmlFor="demo">stitch Length</label>
-                    <TextField size="small" className="col-span-1"/>
+                    <TextField variant='filled' size="small" className="col-span-1"/>
                 </div>
                 <div className="mt-3 grid grid-cols-12 items-center">
                     <label className="col-span-3" htmlFor="demo"></label>
                     <Select
+                        variant="filled"
                         className="col-span-4"
                         labelId="demo"
                         id="demo"
@@ -153,6 +163,7 @@ const Form = () => {
                 <div className="mt-3 grid grid-cols-12 items-center">
                     <label className="col-span-3" htmlFor="demo">Yarn</label>
                     <Select
+                        variant="filled"
                         className="col-span-4"
                         labelId="demo"
                         id="demo"
@@ -163,13 +174,14 @@ const Form = () => {
                         <MenuItem value={30}>Thirty</MenuItem>
                     </Select>
                     <label className="col-span-2 text-center" htmlFor="demo">Ratio 1</label>
-                    <TextField size="small" className="col-span-1"/>
+                    <TextField variant='filled' size="small" className="col-span-1"/>
                     <label className="col-span-1 text-center" htmlFor="demo">Ratio 2</label>
-                    <TextField size="small" className="col-span-1"/>
+                    <TextField variant='filled' size="small" className="col-span-1"/>
                 </div>
                 <div className="mt-3 grid grid-cols-12 items-center">
                     <label className="col-span-3" htmlFor="demo"></label>
                     <Select
+                        variant="filled"
                         className="col-span-4"
                         labelId="demo"
                         id="demo"
@@ -183,6 +195,7 @@ const Form = () => {
                 <div className="mt-3 grid grid-cols-12 items-center">
                     <label className="col-span-3" htmlFor="demo">Fabric Construction</label>
                     <Select
+                        variant="filled"
                         className="col-span-9"
                         labelId="demo"
                         id="demo"
@@ -196,6 +209,7 @@ const Form = () => {
                 <div className="mt-3 grid grid-cols-12 items-center">
                     <label className="col-span-3" htmlFor="demo">Fabric Code</label>
                     <Select
+                        variant="filled"
                         className="col-span-9"
                         labelId="demo"
                         id="demo"
