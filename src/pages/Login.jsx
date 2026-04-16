@@ -1,8 +1,9 @@
 import img from '../assets/logo.png'
 import logo from '../assets/tech.jpg'
 import '../App.css'
-import {Box, Button, TextField} from '@mui/material'
+import {Box, Button, InputAdornment, TextField} from '@mui/material'
 import { useNavigate } from 'react-router-dom'
+import {AccountCircle, Lock, LockOpenSharp } from '@mui/icons-material';
 
 const Login = () => {
     const navigate = useNavigate()
@@ -15,8 +16,14 @@ const Login = () => {
                 </figure>
                 <Box className='bg-gray-100 flex flex-col justify-center gap-5 px-5 flex-1'>
                     <h1 className='text-2xl font-bold'>System Access</h1>
-                    <TextField id="filled-basic" label="User Name" variant="filled" />
-                    <TextField id="filled-basic" label="Password" variant="filled" />
+                    <Box className='flex items-center gap-2'>
+                        <AccountCircle />
+                        <TextField fullWidth id="filled-basic" label="Password" variant="filled"/>
+                    </Box>
+                    <Box className='flex items-center gap-2'>
+                        <Lock/>
+                        <TextField fullWidth id="filled-basic" label="Password" variant="filled"/>
+                    </Box>
                     <Button variant='outlined' size='large' className='mt-5!'>Login</Button>
                 </Box>
             </div>
