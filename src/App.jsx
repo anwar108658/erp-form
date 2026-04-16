@@ -5,12 +5,14 @@ import Form from './pages/Form';
 
 const App = () => {
   return (
+    <div className='w-full h-screen bg-gray-800 text-white'>
     <BrowserRouter>
       <Routes>
-        <Route path='/' element={<Login />}/>
+        <Route path='/' element={<Login />} />
         <Route path='/form' element={<Form />}/>
       </Routes>
     </BrowserRouter>
+    </div>
   )
 }
 
