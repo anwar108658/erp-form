@@ -22,7 +22,7 @@ const Login = () => {
                         input: {
                             startAdornment: (
                             <InputAdornment position="start">
-                                <AccountCircle />
+                                <AccountCircle color='primary' />
                             </InputAdornment>
                             ),
                         },
@@ -35,7 +35,7 @@ const Login = () => {
                         input: {
                             startAdornment: (
                             <InputAdornment position="start">
-                                <Lock />
+                                <Lock color='primary' />
                             </InputAdornment>
                             ),
                         },
