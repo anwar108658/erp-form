@@ -46,7 +46,7 @@ const Login = () => {
                 </Box>
             </div>
             <figure className='animate__animated animate__fadeInDown flex-5  w-full h-full'>
-                <img draggable='true' className='w-full h-full  transition-transform duration-500 ease-out hover:scale-110 contrast-120' src={login} alt="" />
+                <img draggable='false' className='w-full h-full  transition-transform duration-500 ease-out hover:scale-110 contrast-120' src={login} alt="" />
             </figure>
         </div>
     </div>

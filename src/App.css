@@ -10,7 +10,7 @@
 }
 
 .slideOutDown {
-    animation: slideOutDown 1s ease-out ; /* remove infinite */
+  animation: slideOutDown 1s ease-out ; /* remove infinite */
 }
 .curved-box {
   position: relative;
