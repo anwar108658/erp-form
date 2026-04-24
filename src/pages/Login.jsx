@@ -11,7 +11,7 @@ const Login = () => {
     <div className='h-screen flex items-center justify-center overflow-hidden p-5'>
         <div className='w-full md:h-[70vh]  max-w-280 flex flex-col justify-between md:flex-row curved-box  text-gray-700'>
             <div className='animate__animated animate__fadeInLeft md:max-w-120 w-full flex flex-col'>
-                <figure className='p-2 bg-blue-950'>
+                <figure className='p-2 bg-gray-100'>
                     <img draggable='false' className='w-[30%]' src={logo} alt="" />
                 </figure>
                 <Box className='bg-white flex flex-col justify-center gap-3 px-5 flex-1'>
