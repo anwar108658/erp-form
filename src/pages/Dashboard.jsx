@@ -2,8 +2,12 @@ import React from 'react'
 
 const Dashboard = () => {
   return (
-    <div>
-        
+    <div className='h-screen bg-gray-500 flex'>
+      <aside>aside</aside>
+      <div>
+        <header>header</header>
+        <main>content</main>
+      </div>
     </div>
   )
 }

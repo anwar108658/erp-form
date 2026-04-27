@@ -47,7 +47,7 @@ const Login = () => {
                         variant="outlined"/>
                     </Box>
                     <Box className="flex justify-center">
-                        <Button variant='outlined' size='medium' className='mt-5!' endIcon={<LoginRounded/>}>Login</Button>
+                        <Button onClick={() => navigate('/dashboard')} variant='outlined' size='medium' className='mt-5!' endIcon={<LoginRounded/>}>Login</Button>
                     </Box>
                 </Box>
             </div>
