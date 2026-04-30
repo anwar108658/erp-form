@@ -13,6 +13,8 @@ import {
   Brightness4 as DarkModeIcon, 
   Brightness7 as LightModeIcon 
 } from '@mui/icons-material';
+import customerIcon from "../assets/icons/customers.png";
+import salesIcon from "../assets/icons/sales.png";
 
 const drawerWidth = 240;
 
@@ -46,9 +48,9 @@ const Dashboard = () => {
   const toggleTheme = () => setMode((prev) => (prev === 'light' ? 'dark' : 'light'));
 
   const menuItems = [
-    { text: 'Dashboard', icon: <DashboardIcon /> },
-    { text: 'Users', icon: <PeopleIcon /> },
-    { text: 'Settings', icon: <SettingsIcon /> },
+    { text: 'Dashboard', icon: customerIcon },
+    { text: 'Users', icon: salesIcon },
+    { text: 'Settings', icon: customerIcon },
   ];
 
   return (
@@ -111,7 +113,7 @@ const Dashboard = () => {
                     }}
                   >
                     <ListItemIcon sx={{ minWidth: 0, mr: open ? 3 : 'auto', justifyContent: 'center', color: 'primary.main' }}>
-                      {item.icon}
+                      <img width={'30'} src={item.icon} alt={item.text} />
                     </ListItemIcon>
                     <ListItemText primary={item.text} sx={{ opacity: open ? 1 : 0 }} primaryTypographyProps={{ fontWeight: 500 }} />
                   </ListItemButton>
