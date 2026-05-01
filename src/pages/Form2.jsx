@@ -13,7 +13,7 @@ import {
   MenuItem
 } from "@mui/material";
 
-const CustomerScreen = () => {
+const Form2 = () => {
   const [tab, setTab] = useState(0);
   const [file, setFile] = useState(null);
 
@@ -24,51 +24,46 @@ const CustomerScreen = () => {
   };
 
   return (
-    <Box sx={{ p: 3, bgcolor: "#F9FAFB", minHeight: "100vh" }}>
+    <Box sx={{ pt:1, bgcolor: "#F9FAFB", minHeight: "100vh" }}>
 
       {/* HEADER */}
       <Box sx={{ display: "flex", justifyContent: "space-between", mb: 3 }}>
         <Box>
-          <Typography variant="h5" fontWeight="bold">
-            Saira Textile
-          </Typography>
           <Chip label="Active" color="success" size="small" />
         </Box>
-
+        
         <Box>
-          <Button variant="contained" sx={{ mr: 1 }}>
+          <Button size="small" variant="contained" sx={{ mr: 1 }}>
             + New Order
           </Button>
-          <Button variant="outlined" sx={{ mr: 1 }}>
+          <Button size="small" variant="outlined" sx={{ mr: 1 }}>
             Edit
           </Button>
-          <Button variant="outlined" color="error">
+          <Button size="small" variant="outlined" color="error">
             Delete
           </Button>
         </Box>
       </Box>
 
-      <Grid container spacing={3}>
+      <Grid container spacing={2}>
 
         {/* LEFT SIDE FORM */}
-        <Grid item xs={12} md={8}>
-          <Card>
-            <CardContent>
-
+        <Grid container item size={12} >
               {/* BASIC INFO */}
-              <Typography variant="h6">Basic Info</Typography>
-              <Grid container spacing={2} mt={1}>
-                <Grid item xs={6}>
-                  <TextField label="Customer ID" value="CUST-001" fullWidth disabled />
+              <Grid size={{xs:12,sm:6,md:4,lg:3}} container spacing={1} alignSelf={'flex-start'}>
+                <Typography variant="h6">Basic Info</Typography>
+                <Grid item width>
+                  <TextField size="small" fullWidth label="Customer ID" value="CUST-001" disabled />
                 </Grid>
-                <Grid item xs={6}>
-                  <TextField label="Customer Name" required fullWidth />
+                <Grid item width>
+                  <TextField size="small" fullWidth label="Customer Name" required/>
                 </Grid>
-                <Grid item xs={6}>
-                  <TextField label="Company Name" fullWidth />
+                <Grid item width>
+                  <TextField size="small" fullWidth label="Company Name"/>
                 </Grid>
-                <Grid item xs={6}>
+                <Grid item width>
                   <TextField
+                    size="small"
                     select
                     label="Customer Type"
                     fullWidth
@@ -81,75 +76,76 @@ const CustomerScreen = () => {
               </Grid>
 
               {/* CONTACT */}
-              <Typography variant="h6" mt={4}>Contact</Typography>
-              <Grid container spacing={2} mt={1}>
-                <Grid item xs={4}>
-                  <TextField label="Phone" required fullWidth />
+              <Grid size={{xs:12,sm:6,md:4,lg:3}} container spacing={1} alignSelf={'flex-start'}>
+               <Typography  variant="h6" >Contact</Typography>
+                <Grid item width>
+                  <TextField size="small" label="Phone" required fullWidth />
                 </Grid>
-                <Grid item xs={4}>
-                  <TextField label="Email" fullWidth />
+                <Grid item width>
+                  <TextField size="small" label="Email" fullWidth />
                 </Grid>
-                <Grid item xs={4}>
-                  <TextField label="WhatsApp" fullWidth />
+                <Grid item width>
+                  <TextField size="small" label="WhatsApp" fullWidth />
                 </Grid>
               </Grid>
 
               {/* ADDRESS */}
-              <Typography variant="h6" mt={4}>Address</Typography>
-              <Grid container spacing={2} mt={1}>
-                <Grid item xs={4}>
-                  <TextField label="Country" defaultValue="Pakistan" fullWidth />
+              <Grid size={{xs:12,sm:6,md:4,lg:3}} container spacing={1} alignSelf={'flex-start'}>
+              <Typography variant="h6">Address</Typography>
+                <Grid item width>
+                  <TextField size="small" label="Country" defaultValue="Pakistan" fullWidth />
                 </Grid>
-                <Grid item xs={4}>
-                  <TextField label="City" fullWidth />
+                <Grid item width>
+                  <TextField size="small" label="City" fullWidth />
                 </Grid>
-                <Grid item xs={12}>
-                  <TextField label="Full Address" multiline rows={2} fullWidth />
-                </Grid>
-              </Grid>
-
-              {/* BUSINESS */}
-              <Typography variant="h6" mt={4}>Business Info</Typography>
-              <Grid container spacing={2} mt={1}>
-                <Grid item xs={4}>
-                  <TextField label="Credit Limit" fullWidth />
-                </Grid>
-                <Grid item xs={4}>
-                  <TextField label="Payment Terms (Days)" fullWidth />
-                </Grid>
-                <Grid item xs={4}>
-                  <TextField label="Business Type" placeholder="Manufacturer / Importer" fullWidth />
+                <Grid item width>
+                  <TextField size="small" label="Full Address" multiline rows={2} fullWidth />
                 </Grid>
               </Grid>
 
               {/* TAX */}
-              <Typography variant="h6" mt={4}>Tax Information</Typography>
-              <Grid container spacing={2} mt={1}>
-                <Grid item xs={4}>
-                  <TextField label="NTN" fullWidth />
+              <Grid size={{xs:12,sm:6,md:4,lg:3}} container spacing={1} alignSelf={'flex-start'}>
+              <Typography variant="h6">Tax Information</Typography>
+                <Grid item width>
+                  <TextField size="small" label="NTN" fullWidth />
                 </Grid>
-                <Grid item xs={4}>
-                  <TextField label="STRN" fullWidth />
+                <Grid item width>
+                  <TextField size="small" label="STRN" fullWidth />
                 </Grid>
-                <Grid item xs={4}>
-                  <TextField label="Tax Status" placeholder="Active" fullWidth />
+                <Grid item width>
+                  <TextField size="small" label="Tax Status" placeholder="Active" fullWidth />
                 </Grid>
-                <Grid item xs={6}>
-                  <TextField label="Tax Office" fullWidth />
+                <Grid item width>
+                  <TextField size="small" label="Tax Office" fullWidth />
                 </Grid>
-                <Grid item xs={6}>
-                  <Button variant="outlined" component="label" fullWidth>
-                    Upload Tax Document
-                    <input type="file" hidden onChange={handleFileUpload} />
-                  </Button>
-                  {file && (
-                    <Typography variant="body2" mt={1}>
-                      {file.name}
-                    </Typography>
-                  )}
+                
+              </Grid>
+
+              {/* BUSINESS */}
+              <Grid size={{xs:12,sm:6,md:4,lg:3}} container spacing={1} alignSelf={'flex-start'}>
+              <Typography variant="h6">Business Info</Typography>
+                <Grid item width>
+                  <TextField size="small" label="Credit Limit" fullWidth />
+                </Grid>
+                <Grid item width>
+                  <TextField size="small" label="Payment Terms (Days)" fullWidth />
+                </Grid>
+                <Grid item width>
+                  <TextField size="small" label="Business Type" placeholder="Manufacturer / Importer" fullWidth />
                 </Grid>
               </Grid>
 
+              <Grid item width>
+                <Button variant="outlined" component="label" fullWidth>
+                  Upload Tax Document
+                  <input type="file" hidden onChange={handleFileUpload} />
+                </Button>
+                {file && (
+                  <Typography variant="body2" mt={1}>
+                    {file.name}
+                  </Typography>
+                )}
+              </Grid>
               {/* SAVE */}
               <Box mt={4}>
                 <Button variant="contained" size="large">
@@ -157,12 +153,10 @@ const CustomerScreen = () => {
                 </Button>
               </Box>
 
-            </CardContent>
-          </Card>
         </Grid>
 
         {/* RIGHT PANEL */}
-        <Grid item xs={12} md={4}>
+        <Grid item size={12}>
           <Card>
             <CardContent>
 
@@ -199,4 +193,4 @@ const CustomerScreen = () => {
   );
 };
 
-export default CustomerScreen;
+export default Form2;

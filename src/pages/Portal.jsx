@@ -1,4 +1,4 @@
-import * as React from 'react';
+import * as React from "react";
 import {
   Box,
   Drawer,
@@ -12,13 +12,14 @@ import {
   ListItem,
   ListItemButton,
   ListItemIcon,
-  ListItemText
-} from '@mui/material';
+  ListItemText,
+} from "@mui/material";
 
-import MenuIcon from '@mui/icons-material/Menu';
-import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
-import InboxIcon from '@mui/icons-material/MoveToInbox';
-import MailIcon from '@mui/icons-material/Mail';
+import MenuIcon from "@mui/icons-material/Menu";
+import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
+import InboxIcon from "@mui/icons-material/MoveToInbox";
+import MailIcon from "@mui/icons-material/Mail";
+import Form2 from "./Form2";
 
 const drawerWidth = 240;
 
@@ -26,14 +27,14 @@ export default function Portal() {
   const [open, setOpen] = React.useState(true);
 
   return (
-    <Box sx={{ display: 'flex' }}>
+    <Box sx={{ display: "flex" }}>
       <CssBaseline />
 
       {/* APP BAR */}
       <AppBar
         position="fixed"
         sx={{
-          transition: '0.3s',
+          transition: "0.3s",
           ...(open && {
             width: `calc(100% - ${drawerWidth}px)`,
             ml: `${drawerWidth}px`,
@@ -51,27 +52,25 @@ export default function Portal() {
       </AppBar>
 
       {/* DRAWER */}
-<Drawer
-  variant="persistent"
-  anchor="left"
-  open={open}
-  sx={{
-    width: drawerWidth,
-    flexShrink: 0,
+      <Drawer
+        variant="persistent"
+        anchor="left"
+        open={open}
+        sx={{
+          width: drawerWidth,
+          flexShrink: 0,
 
-    // 🔥 THIS IS THE FIX
-    position: 'absolute',
+          // 🔥 THIS IS THE FIX
+          position: "absolute",
 
-    '& .MuiDrawer-paper': {
-      width: drawerWidth,
-      transition: '0.3s',
-      transform: open
-        ? 'translateX(0)'
-        : `translateX(-${drawerWidth}px)`,
-    },
-  }}
->
-        <Toolbar sx={{ justifyContent: 'flex-end' }}>
+          "& .MuiDrawer-paper": {
+            width: drawerWidth,
+            transition: "0.3s",
+            transform: open ? "translateX(0)" : `translateX(-${drawerWidth}px)`,
+          },
+        }}
+      >
+        <Toolbar sx={{ justifyContent: "flex-end" }}>
           <IconButton onClick={() => setOpen(false)}>
             <ChevronLeftIcon />
           </IconButton>
@@ -80,7 +79,7 @@ export default function Portal() {
         <Divider />
 
         <List>
-          {['Customer' ].map((text, index) => (
+          {["Customer"].map((text, index) => (
             <ListItem key={text} disablePadding>
               <ListItemButton>
                 <ListItemIcon>
@@ -99,16 +98,13 @@ export default function Portal() {
         sx={{
           flexGrow: 1,
           p: 3,
-          transition: '0.3s',
-          ml:0,
+          transition: "0.3s",
+          ml: 0,
           ml: open ? `${drawerWidth}px` : 0,
         }}
       >
-        <Toolbar />
-ddd
-        <Typography>
-          Your content here...
-        </Typography>
+        <Toolbar variant="dense" />
+        <Form2 />
       </Box>
     </Box>
   );
